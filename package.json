@@ -1,0 +1,13 @@
+{
+  "name": "a-moment-stroke-concept",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:brain": "node tools/prepare-brain.cjs && node tools/build-brain.cjs"
+  },
+  "devDependencies": {
+    "three": "0.186.1",
+    "esbuild": "0.28.2",
+    "draco3d": "1.5.7"
+  }
+}

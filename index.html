@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A moment can change everything. Learn to recognise the signs of stroke."
+    />
+    <title>A moment — Stroke awareness</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#act">Skip animation and learn the signs</a>
+    <main>
+      <section
+        class="story"
+        id="home"
+        aria-label="From an ordinary moment to a stroke: a scroll-through illustration"
+      >
+        <div class="scene">
+          <div class="photo-layer">
+            <img
+              id="photo"
+              src="assets/meadow-centered.png"
+              alt="Two adults resting on a picnic blanket in a meadow"
+            />
+            <canvas id="particles" aria-hidden="true"></canvas>
+            <div class="shade"></div>
+          </div>
+          <div id="inside" aria-hidden="true">
+            <canvas id="vessel"></canvas>
+          </div>
+          <div class="topline">
+            <span>A MOMENT / STROKE AWARENESS</span
+            ><a href="#act">Know the signs</a>
+          </div>
+          <div class="caption opening">
+            <p class="eyebrow">LIFE CAN CHANGE IN A MOMENT.</p>
+            <h1>Just an ordinary<br />afternoon.</h1>
+          </div>
+          <div class="scene-bottom">
+            <span id="scroll-hint">[ Scroll slowly to look closer ]</span
+            ><a href="#act">Skip animation</a>
+          </div>
+          <div class="progress"><span></span></div>
+        </div>
+      </section>
+      <section id="act" class="awareness">
+        <p class="eyebrow">RECOGNISE THE SIGNS. ACT F.A.S.T.</p>
+        <h2>A moment to notice.<br />A moment to act.</h2>
+        <p class="intro">
+          The animation shows a bleeding, or haemorrhagic, stroke. A stroke can
+          also happen when a vessel is blocked. Both are medical emergencies.
+        </p>
+        <div class="fast">
+          <div>
+            <b>F</b>
+            <h3>Face</h3>
+            <p>Has one side of their face drooped?</p>
+          </div>
+          <div>
+            <b>A</b>
+            <h3>Arms</h3>
+            <p>Can they raise both arms?</p>
+          </div>
+          <div>
+            <b>S</b>
+            <h3>Speech</h3>
+            <p>Is their speech slurred or hard to understand?</p>
+          </div>
+          <div>
+            <b>T</b>
+            <h3>Time</h3>
+            <p>Call emergency services immediately.</p>
+          </div>
+        </div>
+        <p class="urgent">
+          In Australia, call <a href="tel:000">000</a>. Elsewhere, call your
+          local emergency number.
+        </p>
+        <p class="small">
+          Act even if symptoms disappear. F.A.S.T. covers common signs, but not
+          all strokes.
+        </p>
+        <a
+          class="source"
+          href="https://strokefoundation.org.au/about-stroke/learn/signs-of-stroke"
+          target="_blank"
+          rel="noopener"
+          >Read the Stroke Foundation’s full guidance</a
+        >
+      </section>
+    </main>
+    <footer>
+      <span>Stroke awareness · Design concept</span
+      ><a href="#home">Replay the story</a>
+    </footer>
+    <script src="assets/meadow-centered-colors.js"></script>
+    <script src="assets/brain-meshes.js"></script>
+    <script src="assets/brain3d.bundle.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

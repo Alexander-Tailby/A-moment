@@ -1,0 +1,291 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600&family=IBM+Plex+Mono&display=swap");
+:root {
+  --paper: #f3f3ed;
+  --ink: #272b26;
+  --mono: "IBM Plex Mono", monospace;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+a:focus-visible {
+  outline: 3px solid #efce95;
+  outline-offset: 6px;
+}
+.skip {
+  position: fixed;
+  z-index: 99;
+  left: 20px;
+  top: -100px;
+  padding: 15px;
+  background: white;
+}
+.skip:focus {
+  top: 20px;
+}
+.story {
+  height: 670vh;
+  height: 670svh;
+  background: #1d1415;
+}
+.scene {
+  height: 100vh;
+  height: 100svh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  color: #fff;
+}
+.photo-layer,
+#photo,
+#particles,
+.shade,
+#inside,
+#vessel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+#photo {
+  object-fit: cover;
+  object-position: 50% 50%;
+  will-change: transform;
+  transform-origin: 0 0;
+}
+#particles {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+.particles-ready #particles {
+  opacity: 1;
+}
+.particles-ready #photo {
+  visibility: hidden;
+}
+.photo-layer {
+  z-index: 1;
+  pointer-events: none;
+}
+.shade {
+  background: linear-gradient(0deg, #102019aa, transparent 65%, #15201233);
+}
+#inside {
+  background: #eeebe5;
+  opacity: 0;
+  will-change: opacity;
+}
+#vessel {
+  display: block;
+}
+.topline {
+  position: absolute;
+  z-index: 3;
+  top: 35px;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  font: 11px var(--mono);
+  letter-spacing: 0.05em;
+}
+.topline > a {
+  font:
+    13px "DM Sans",
+    sans-serif;
+}
+.caption {
+  z-index: 2;
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 16%;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+}
+.opening {
+  opacity: 1;
+}
+.caption h1,
+.caption h2 {
+  font-size: clamp(46px, 6.9vw, 112px);
+  font-weight: 450;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.eyebrow {
+  font: 11px var(--mono);
+  letter-spacing: 0.08em;
+  margin: 0 0 24px;
+}
+.scene-bottom {
+  position: absolute;
+  bottom: 27px;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  font: 11px var(--mono);
+  z-index: 4;
+}
+.scene-bottom a {
+  font-size: 11px;
+}
+.progress {
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #ffffff20;
+}
+.progress span {
+  display: block;
+  background: #eee0d0;
+  height: 100%;
+  width: 0;
+}
+.awareness {
+  max-width: 1150px;
+  margin: auto;
+  padding: 100px 6% 90px;
+  scroll-margin-top: 25px;
+}
+.awareness h2 {
+  font-size: clamp(39px, 5vw, 65px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  font-weight: 450;
+  margin: 0;
+}
+.intro {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 610px;
+  margin: 30px 0 0;
+  color: #62665f;
+}
+.fast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  margin: 55px 0 40px;
+}
+.fast > div {
+  border-top: 1px solid #b8bcb3;
+  padding-top: 23px;
+}
+.fast b {
+  font-size: 45px;
+  font-weight: 500;
+  color: #a33341;
+}
+.fast h3 {
+  font-weight: 500;
+  font-size: 19px;
+  margin: 10px 0;
+}
+.fast p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #62665f;
+  margin: 0;
+}
+.urgent {
+  font-size: 19px;
+  line-height: 1.5;
+}
+.urgent a {
+  font-weight: 600;
+}
+.small,
+.source {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #61675c;
+}
+.source {
+  display: inline-block;
+  margin-top: 10px;
+}
+footer {
+  padding: 25px 6%;
+  border-top: 1px solid #d3d6cc;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  font: 11px var(--mono);
+  color: #67705e;
+}
+@media (max-width: 650px) {
+  .topline {
+    top: 24px;
+    font-size: 9px;
+  }
+  .topline > a {
+    font-size: 12px;
+  }
+  .caption {
+    bottom: 19%;
+    left: 5%;
+    right: 5%;
+  }
+  .caption h1,
+  .caption h2 {
+    font-size: clamp(42px, 10vw, 65px);
+  }
+  .eyebrow {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+  .scene-bottom {
+    font-size: 9px;
+    gap: 15px;
+  }
+  .scene-bottom a {
+    font-size: 9px;
+  }
+  .awareness {
+    padding: 60px 6%;
+  }
+  .fast {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .intro {
+    font-size: 17px;
+  }
+  .urgent {
+    font-size: 17px;
+  }
+  footer {
+    font-size: 9px;
+  }
+  .story {
+    height: 610svh;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
